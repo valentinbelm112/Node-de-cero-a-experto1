@@ -1,0 +1,18 @@
+{
+  "name": "sesion-4",
+  "version": "1.0.0",
+  "description": "Es una simple tabla de multiplicar con archivos de texto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "base3": "node app.js --base=9"
+  },
+  "author": "Valentin Antunez Gonzales",
+  "license": "MIT",
+  "dependencies": {
+    "colores": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

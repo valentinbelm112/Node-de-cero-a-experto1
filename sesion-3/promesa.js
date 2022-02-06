@@ -50,10 +50,20 @@ getEmpleado(3)
     console.log(err);
   });
 */
+let nombre;
 getEmpleado(3)
   .then((empleado) => {
-    return getSalario(3);
+    nombre = empleado;
+    return getSalario(30);
   })
   .then((salario) => {
-    console.log(salario.salario);
+    console.log(
+      `El empleado:`,
+      nombre.nombre,
+      `tiene un salario de:`,
+      salario.salario
+    );
+  })
+  .catch((err) => {
+    console.log(err);
   });
