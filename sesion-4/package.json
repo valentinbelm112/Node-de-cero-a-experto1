@@ -10,7 +10,8 @@
   "author": "Valentin Antunez Gonzales",
   "license": "MIT",
   "dependencies": {
-    "colores": "^1.0.1"
+    "colores": "^1.0.1",
+    "colors": "^1.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
