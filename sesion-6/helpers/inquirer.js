@@ -11,11 +11,11 @@ const menuOpt = [
     choices: [
       {
         value: "1",
-        name: "1.Crear tarea",
+        name: "1.Buscar ciudad",
       },
       {
         value: "2",
-        name: "2.Listar tareas",
+        name: "2.Histotial",
       },
 
       {
@@ -48,7 +48,7 @@ const leerInput = async (mensaje) => {
   const question = [
     {
       type: "input",
-      name: "desc",
+      name: "ciudad",
       mensaje,
       validate(value) {
         if (value.length === 0) {
@@ -59,23 +59,23 @@ const leerInput = async (mensaje) => {
     },
   ];
 
-  const { desc } = await inquirer.prompt(question);
-  return desc;
+  const { ciudad } = await inquirer.prompt(question);
+  return ciudad;
 };
 
-const listadoTareasBorrar = async (tareas = {}) => {
-  const choices = tareas.map((tarea, idx) => {
+const listarLugares = async (lugares = []) => {
+  const choices = lugares.map((lugar, idx) => {
     const i = `${idx + 1}`;
 
     return {
-      value: tarea.id,
-      name: `${i} ${tarea.desc}`,
+      value: lugar.id,
+      name: `${i} ${lugar.nombre}`,
     };
   });
   const preguntas = {
     type: "list",
     name: "id",
-    message: "Borrar",
+    message: "Selecciones Lugar",
     choices,
   };
   const { id } = await inquirer.prompt(preguntas);
@@ -98,6 +98,6 @@ module.exports = {
   inquirerMenu,
   pausa,
   leerInput,
-  listadoTareasBorrar,
+  listarLugares,
   confirmar,
 };
